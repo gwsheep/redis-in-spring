@@ -4,9 +4,17 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/mydb
     username: postgres
-    password: jpro123!
+    password: 
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    org.springframework.cache: trace
